@@ -1,5 +1,5 @@
+'use strict';
 var answerY = function(answer, sentence) {
-  'use strict';
   if (answer.toUpperCase() === 'Y') {
     alert('You are correct, ' + sentence);
     console.log(sentence);
@@ -10,7 +10,6 @@ var answerY = function(answer, sentence) {
 };
 
 var answerN = function(answer, sentence) {
-  'use strict';
   if (answer.toUpperCase() === 'N') {
     alert('You are correct, ' + sentence);
     console.log(sentence);
