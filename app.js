@@ -42,3 +42,6 @@ var q5 = answerN(answer5, 'I dislike all sports that involve snow. Snow is cold.
 
 var answer6 = prompt('Did I train to be a Dietitian in college?');
 var q6 = answerY(answer6, 'I am a Registered Dietitian.');
+
+var endOfQuiz = alert(name + ' thanks for playing. Hope you enjoy my page!');
+console.log('Hello ' + name + ', thanks for visiting and playing around with my basic JavaScript program! Improvements coming soon!!');
