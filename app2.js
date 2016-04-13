@@ -1,24 +1,3 @@
-// 'use strict';
-// var answerY = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'Y') {
-//     alert('You are correct, ' + sentence);
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-//
-// var answerN = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'N') {
-//     alert('You are correct, ' + sentence);
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-
 var name = prompt('What is your name?');
 console.log('Welcome ' + name + ' to my little quiz.');
 alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
@@ -41,6 +20,7 @@ if (answer2 === 'N') {
   console.log(answer1 + ' is not correct.');
   alert('Nope. No Corgie Sadly.');
 }
+
 var answer3 = prompt('Do I have a little brother?').toUpperCase();
 if (answer3 === 'Y') {
   console.log(answer2 + ' is correct');
