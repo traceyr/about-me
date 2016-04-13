@@ -43,8 +43,9 @@ alert('A different format for the next question. The rules here change a bit. Fo
 
 var qSixCounter = 1;
 var max = 4;
+var answer6;
 while (qSixCounter <= max) {
-  var answer6 = prompt('How many jobs have I had?');
+  answer6 = prompt('How many jobs have I had?');
   if (parseInt(answer6) === 4) {
     alert('Correct, I have had four jobs! You got it right on your attempt # ' + qSixCounter + '!' );
     console.log('Yah it only too you ' + qSixCounter + ' tries!');
