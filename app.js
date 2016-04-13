@@ -44,15 +44,20 @@ alert('A different format for the next question. The rules here change a bit. Fo
 var qSixCounter = 1;
 var max = 4;
 var answer6;
+var numJobs = 4;
 while (qSixCounter <= max) {
   answer6 = prompt('How many jobs have I had?');
   if (isNaN(answer6) === false) {
-    if (parseInt(answer6) === 4) {
+    if (parseInt(answer6) === numJobs) {
       alert('Correct, I have had four jobs! You got it right on your attempt # ' + qSixCounter + '!' );
       console.log('Yah it only too you ' + qSixCounter + ' tries!');
       qSixCounter = max + 1;
     } else {
-      alert('Incorrect, please try again.');
+      if (parseInt(answer6) >= numJobs){
+        alert('Incorrect. That was too high.');
+      } else if (parseInt(answer6) <= numJobs) {
+        alert('Incorrect. Too low.');
+      }
       console.log('That was attempt # ' + qSixCounter + '. You have ' + (max - qSixCounter) + ' tries left.' );
       if (qSixCounter === max) {
         alert('Sorry, you did not quess correctly. I have had 4 jobs.');
