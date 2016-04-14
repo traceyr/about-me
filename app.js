@@ -1,43 +1,43 @@
-// 'use strict';
-// var answerY = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'Y') {
-//     alert('You are correct, ' + sentence);
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-//
-// var answerN = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'N') {
-//     alert('You are correct, ' + sentence);
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-//
-// var name = prompt('What is your name?');
-// console.log('Welcome ' + name + ' to my little quiz.');
-// alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
-// alert('For the first five questions, please answer with a simple Y or N');
-//
-// var answer1 = prompt('Do I have a cat named Minerva?');
-// var q1 = answerY(answer1, 'I have a cat named Minerva.');
-//
-// var answer2 = prompt('Do I have a Corgi named Sherwood?');
-// var q2 = answerN(answer2, 'I do not have a Corgie...YET!!!!');
-//
-// var answer3 = prompt('Do I have a little brother?');
-// var q3 = answerY(answer3, 'Skyler is my little bro.');
-//
-// var answer4 = prompt('Is this my first class at CodeFellows?');
-// var q4 = answerN(answer4, 'I took classes last year!');
-//
-// var answer5 = prompt('Did I train to be a Dietitian in college?');
-// var q5 = answerY(answer5, 'I am a Registered Dietitian.');
+'use strict';
+var answerY = function(answer, sentence) {
+  if (answer.toUpperCase() === 'Y') {
+    alert('You are correct, ' + sentence);
+    console.log(sentence);
+  } else {
+    alert('That is incorrect, ' + sentence);
+    console.log(sentence);
+  }
+};
+
+var answerN = function(answer, sentence) {
+  if (answer.toUpperCase() === 'N') {
+    alert('You are correct, ' + sentence);
+    console.log(sentence);
+  } else {
+    alert('That is incorrect, ' + sentence);
+    console.log(sentence);
+  }
+};
+
+var name = prompt('What is your name?');
+console.log('Welcome ' + name + ' to my little quiz.');
+alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
+alert('For the first five questions, please answer with a simple Y or N');
+
+var answer1 = prompt('Do I have a cat named Minerva?');
+var q1 = answerY(answer1, 'I have a cat named Minerva.');
+
+var answer2 = prompt('Do I have a Corgi named Sherwood?');
+var q2 = answerN(answer2, 'I do not have a Corgie...YET!!!!');
+
+var answer3 = prompt('Do I have a little brother?');
+var q3 = answerY(answer3, 'Skyler is my little bro.');
+
+var answer4 = prompt('Is this my first class at CodeFellows?');
+var q4 = answerN(answer4, 'I took classes last year!');
+
+var answer5 = prompt('Did I train to be a Dietitian in college?');
+var q5 = answerY(answer5, 'I am a Registered Dietitian.');
 
 alert('A different format for the next question. The rules here change a bit. For this next question, I will present the question and you will have four guesses to get it right. Please enter a numerical value between 1 - 20 Good Luck!');
 
@@ -68,6 +68,41 @@ while (qSixCounter <= max) {
   } else {
     alert('That is not a valid number. Please try again.');
     answer6;
+  }
+}
+
+var countries = ['belize', 'france', 'germany', 'hungary', 'liechtenstein', 'italy', 'switzerland', 'poland'];
+var countriesCombined = countries.join(', ');
+var tries = 6;
+var qSevenCounter = 1;
+var isCorrect = false;
+
+alert('For this last question, please type in a word for your answer.');
+
+while (qSevenCounter <= tries) {
+  var answer7 = prompt('Name a country I have visited.').toLowerCase();
+  for (var i = 0; i < countries.length; i++) {
+    console.log(countries[i]);
+    if (answer7 === countries[i]) {
+      alert('Correct. I have been to ' + answer7 + '. Here is a partial list of countries I have visited: ' + countriesCombined);
+      console.log(countriesCombined);
+      isCorrect = true;
+      break;
+    } else {
+      console.log('current guess is not at ' + i + ' continuing to check');
+    }
+  }
+  if (isCorrect === false) {
+    alert('Incorrect. Please try again.');
+    console.log('Nope, you have ' + (tries - qSevenCounter) + ' left.');
+    qSevenCounter++;
+    if (qSevenCounter === (tries + 1)) {
+      alert('Nope. Here is a partial list of countries I have visited: ' + countriesCombined);
+      console.log('FAILL');
+      break;
+    }
+  } else {
+    break;
   }
 }
 
