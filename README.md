@@ -1,6 +1,7 @@
 # About Me
 An about me page, about me, Tracey Radcliffe. Code 201 assignment to create this page with a guessing game
 
-I like food.
+Driver: Jeremy Perez
+Navigator: Tracey Radcliffe
 
-THE NWS WILL STOP SCREAMING
+We did this together!
