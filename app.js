@@ -1,7 +1,9 @@
 'use strict';
+var numCorrect = 0;
 var answerY = function(answer, sentence) {
   if (answer.toUpperCase() === 'Y') {
     alert('You are correct, ' + sentence);
+    numCorrect++;
     console.log(sentence);
   } else {
     alert('That is incorrect, ' + sentence);
@@ -12,6 +14,7 @@ var answerY = function(answer, sentence) {
 var answerN = function(answer, sentence) {
   if (answer.toUpperCase() === 'N') {
     alert('You are correct, ' + sentence);
+    numCorrect++;
     console.log(sentence);
   } else {
     alert('That is incorrect, ' + sentence);
@@ -51,6 +54,7 @@ while (qSixCounter <= max) {
     if (parseInt(answer6) === numJobs) {
       alert('Correct, I have had four jobs! You got it right on your attempt # ' + qSixCounter + '!' );
       console.log('Yah it only too you ' + qSixCounter + ' tries!');
+      numCorrect++;
       qSixCounter = max + 1;
     } else {
       if (parseInt(answer6) >= numJobs){
@@ -86,6 +90,7 @@ while (qSevenCounter <= tries) {
     if (answer7 === countries[i]) {
       alert('Correct. I have been to ' + answer7 + '. Here is a partial list of countries I have visited: ' + countriesCombined);
       console.log(countriesCombined);
+      numCorrect++;
       isCorrect = true;
       break;
     } else {
@@ -105,6 +110,8 @@ while (qSevenCounter <= tries) {
     break;
   }
 }
+
+alert('You got ' + numCorrect + ' answers right ' + name + '. Congrats!');
 
 var endOfQuiz = alert(name + ' thanks for playing. Hope you enjoy my page!');
 console.log('Hello ' + name + ', thanks for visiting and playing around with my basic JavaScript program! Improvements coming soon!!');
