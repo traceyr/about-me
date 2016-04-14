@@ -21,9 +21,20 @@
 //     console.log(sentence);
 //   }
 // };
-
-// Putting everything in one funciton
-
+// var answer1 = prompt('Do I have a cat named Minerva?');
+// var q1 = answerY(answer1, 'I have a cat named Minerva.');
+//
+// var answer2 = prompt('Do I have a Corgi named Sherwood?');
+// var q2 = answerN(answer2, 'I do not have a Corgie...YET!!!!');
+//
+// var answer3 = prompt('Do I have a little brother?');
+// var q3 = answerY(answer3, 'Skyler is my little bro.');
+//
+// var answer4 = prompt('Is this my first class at CodeFellows?');
+// var q4 = answerN(answer4, 'I took classes last year!');
+//
+// var answer5 = prompt('Did I train to be a Dietitian in college?');
+// var q5 = answerY(answer5, 'I am a Registered Dietitian.');
 var name = prompt('What is your name?');
 console.log('Welcome ' + name + ' to my little quiz.');
 alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
@@ -52,21 +63,6 @@ for (var i = 0; i < questions.length; i++) {
     alert(response[i][1]);
   }
 }
-
-// var answer1 = prompt('Do I have a cat named Minerva?');
-// var q1 = answerY(answer1, 'I have a cat named Minerva.');
-//
-// var answer2 = prompt('Do I have a Corgi named Sherwood?');
-// var q2 = answerN(answer2, 'I do not have a Corgie...YET!!!!');
-//
-// var answer3 = prompt('Do I have a little brother?');
-// var q3 = answerY(answer3, 'Skyler is my little bro.');
-//
-// var answer4 = prompt('Is this my first class at CodeFellows?');
-// var q4 = answerN(answer4, 'I took classes last year!');
-//
-// var answer5 = prompt('Did I train to be a Dietitian in college?');
-// var q5 = answerY(answer5, 'I am a Registered Dietitian.');
 
 alert('A different format for the next question. The rules here change a bit. For this next question, I will present the question and you will have four guesses to get it right. Please enter a numerical value between 1 - 20 Good Luck!');
 
