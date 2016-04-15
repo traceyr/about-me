@@ -78,3 +78,25 @@
 // }
 // var endOfQuiz = alert(name + ' thanks for playing. Hope you enjoy my page!');
 // console.log('Hello ' + name + ', thanks for visiting and playing around with my basic JavaScript program! Improvements coming soon!!');
+
+// Putting everything in one funciton
+//
+// questions = ['Do I have a cat named Minerva?',
+// 'Do I have a Corgi named Sherwood?',
+// 'Do I have a little brother?',
+// 'Is this my first class at CodeFellows?',
+// 'Did I train to be a Dietitian in college?'
+// ]
+//
+// correctAnswer = ['Y', 'N', 'Y', 'N', 'Y']
+//
+// var numQuestions = 5;
+// for (var 1 = 0; i < numQuestions.length; i++) {
+//   var answer = prompt(questions[i]);
+//   if (answer.toUpperCase() === correctAnswer[i]) {
+//     alert(response[i][0]);
+//     console.log(response[i][0]);
+//   } else {
+//     alert(respnce[i][1]);
+// //   }
+// // }
