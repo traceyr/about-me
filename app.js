@@ -1,44 +1,4 @@
-// 'use strict';
-// var numCorrect = 0;
-// var answerY = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'Y') {
-//     alert('You are correct, ' + sentence);
-//     numCorrect++;
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-//
-// var answerN = function(answer, sentence) {
-//   if (answer.toUpperCase() === 'N') {
-//     alert('You are correct, ' + sentence);
-//     numCorrect++;
-//     console.log(sentence);
-//   } else {
-//     alert('That is incorrect, ' + sentence);
-//     console.log(sentence);
-//   }
-// };
-// var answer1 = prompt('Do I have a cat named Minerva?');
-// var q1 = answerY(answer1, 'I have a cat named Minerva.');
-//
-// var answer2 = prompt('Do I have a Corgi named Sherwood?');
-// var q2 = answerN(answer2, 'I do not have a Corgie...YET!!!!');
-//
-// var answer3 = prompt('Do I have a little brother?');
-// var q3 = answerY(answer3, 'Skyler is my little bro.');
-//
-// var answer4 = prompt('Is this my first class at CodeFellows?');
-// var q4 = answerN(answer4, 'I took classes last year!');
-//
-// var answer5 = prompt('Did I train to be a Dietitian in college?');
-// var q5 = answerY(answer5, 'I am a Registered Dietitian.');
-var name = prompt('What is your name?');
-console.log('Welcome ' + name + ' to my little quiz.');
-alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
-alert('For the first five questions, please answer with a simple Y or N');
+var numCorrect = 0;
 
 var questions = ['Do I have a cat named Minerva?',
 'Do I have a Corgi named Sherwood?',
@@ -54,15 +14,26 @@ var response = [['Correct! I have a cat named Minerva.', 'Incorrect! I have a ca
 ['Correct! I took classes last year!', 'Incorrect! I took classes last year!'],
 ['Correct! I am a Registered Dietitian.', 'Incorrect! I am a Registered Dietitian.']];
 
-for (var i = 0; i < questions.length; i++) {
-  var answer = prompt(questions[i]);
-  if (answer.toUpperCase() === correctAnswer[i]) {
-    alert(response[i][0]);
-    console.log(response[i][0]);
-  } else {
-    alert(response[i][1]);
+function oneToFive(question, solution, userSees) {
+  for (var i = 0; i < question.length; i++) {
+    var answer = prompt(question[i]);
+    if (answer.toUpperCase() === solution[i]) {
+      alert(userSees[i][0]);
+      numCorrect++;
+      console.log(userSees[i][0]);
+    } else {
+      alert(userSees[i][1]);
+      console.log(userSees[i][1]);
+    }
   }
 }
+
+var name = prompt('What is your name?');
+console.log('Welcome ' + name + ' to my little quiz.');
+alert('Hello, ' + name + ' lets play this quiz to see how well you know me!');
+alert('For the first five questions, please answer with a simple Y or N');
+
+oneToFive(questions, correctAnswer, response);
 
 alert('A different format for the next question. The rules here change a bit. For this next question, I will present the question and you will have four guesses to get it right. Please enter a numerical value between 1 - 20 Good Luck!');
 
